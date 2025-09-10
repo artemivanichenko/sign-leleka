@@ -1,0 +1,147 @@
+.container {
+	display: flex;
+	min-height: 100vh;
+	background: #f3f4f6;
+}
+
+.formSection {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* padding: 40px; */
+	background: white;
+}
+
+/* .imageSection {
+	flex: 1;
+	background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+	position: relative;
+	overflow: hidden;
+} */
+
+.nestImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	height: 300px;
+	background: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='150' cy='100' r='40' fill='%23fef3c7' opacity='0.8'/%3E%3Cellipse cx='130' cy='110' rx='35' ry='25' fill='%23fbbf24' opacity='0.6'/%3E%3Cellipse cx='170' cy='110' rx='35' ry='25' fill='%23f59e0b' opacity='0.6'/%3E%3Ccircle cx='150' cy='140' r='30' fill='%23d97706' opacity='0.7'/%3E%3C/svg%3E")
+		no-repeat center;
+	background-size: contain;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 700;
+	color: #1f2937;
+	margin-bottom: 32px;
+	text-align: center;
+}
+
+.form {
+	width: 100%;
+	max-width: 720px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.inputGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+	padding: 16px;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 16px;
+	background: #f9fafb;
+	transition: all 0.2s;
+}
+
+.input:focus {
+	outline: none;
+	border-color: #3b82f6;
+	background: white;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.submitButton {
+	padding: 16px;
+	background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s;
+	margin-top: 8px;
+}
+
+.submitButton:hover:not(:disabled) {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.submitButton:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.googleButton {
+	padding: 14px;
+	background: #f3f4f6;
+	color: #374151;
+	border: 1px solid #d1d5db;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	transition: all 0.2s;
+}
+
+.googleButton:hover {
+	background: #e5e7eb;
+	transform: translateY(-1px);
+}
+
+.googleIcon {
+	width: 18px;
+	height: 18px;
+	background: linear-gradient(135deg, #4285f4, #db4437, #f4b400, #0f9d58);
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.registerPrompt {
+	margin-top: 24px;
+	text-align: center;
+	color: #6b7280;
+}
+
+.registerLink {
+	background: none;
+	border: none;
+	color: #3b82f6;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+.registerLink:hover {
+	color: #2563eb;
+}

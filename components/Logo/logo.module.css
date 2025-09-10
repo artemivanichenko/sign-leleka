@@ -1,0 +1,30 @@
+.logo {
+	margin-bottom: 40px;
+}
+
+.logoLink {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.logoLink:hover {
+	transform: scale(1.02);
+	filter: brightness(1.05);
+}
+
+.logoText {
+	font-size: 24px;
+	font-weight: 700;
+	color: #1f2937;
+	transition: color 0.2s ease;
+	white-space: nowrap;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+}
