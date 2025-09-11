@@ -18,9 +18,6 @@ export interface RegisterData {
 	name: string;
 	email: string;
 	password: string;
-	childGender?: "boy" | "girl" | "unknown";
-	deliveryDate?: string;
-	avatar?: File;
 }
 
 export interface ProfileUpdatePayload {

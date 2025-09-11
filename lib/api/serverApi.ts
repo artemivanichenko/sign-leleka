@@ -12,7 +12,7 @@ export const checkServerSession = async () => {
 
 export const getMeServer = async () => {
 	const cookieStore = await cookies();
-	const { data } = await nextServer.get<User>("/users/me", {
+	const { data } = await nextServer.get<User>("/users/current", {
 		headers: { Cookie: cookieStore.toString() },
 	});
 	return data;

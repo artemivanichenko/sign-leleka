@@ -1,8 +1,8 @@
-import { LoginData, User } from "@/types/auth";
+import { LoginData, RegisterData, User } from "@/types/auth";
 import { nextServer } from "./api";
 
-export const register = async (loginData: LoginData) => {
-	const { data } = await nextServer.post("/auth/register", loginData);
+export const register = async (registerData: RegisterData) => {
+	const { data } = await nextServer.post("/auth/register", registerData);
 	return data;
 };
 
@@ -25,7 +25,7 @@ export const checkSession = async () => {
 };
 
 export const getMe = async () => {
-	const { data } = await nextServer.get<User>("/users/me");
+	const { data } = await nextServer.get<User>("/users/current");
 	return data;
 };
 
@@ -35,7 +35,7 @@ export const userUpdate = async (
 	profileUpdPayload: ProfileUpdatePayloadProps
 ) => {
 	const { data } = await nextServer.patch<User>(
-		"/users/me",
+		"/users/current",
 		profileUpdPayload
 	);
 	return data;

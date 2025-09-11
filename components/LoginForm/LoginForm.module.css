@@ -10,7 +10,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 40px;
+	/* padding: 40px; */
 	background: white;
 }
 
@@ -43,7 +43,7 @@
 
 .form {
 	width: 100%;
-	max-width: 350px;
+	max-width: 720px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -115,16 +115,11 @@
 }
 
 .googleIcon {
-	width: 18px;
-	height: 18px;
-	background: linear-gradient(135deg, #4285f4, #db4437, #f4b400, #0f9d58);
+	width: 25px;
+	height: 25px;
 	border-radius: 2px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 22px;
 }
 
 .registerPrompt {
@@ -144,19 +139,4 @@
 
 .registerLink:hover {
 	color: #2563eb;
-}
-
-@media (max-width: 768px) {
-	.container {
-		flex-direction: column;
-	}
-
-	.imageSection {
-		min-height: 200px;
-	}
-
-	.formSection {
-		max-width: none;
-		padding: 24px;
-	}
 }
