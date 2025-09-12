@@ -7,6 +7,7 @@ import { useAuthStore } from "@/lib/store/authStore";
 import { login } from "@/lib/api/clientApi";
 import { ApiError } from "next/dist/server/api-utils";
 import { LoginData } from "@/types/auth";
+import Link from "next/link";
 
 const LoginForm = () => {
 	const router = useRouter();
@@ -21,7 +22,7 @@ const LoginForm = () => {
 
 			if (user) {
 				setUser(user);
-				router.push("/profile");
+				router.push("/my-day");
 			}
 		} catch (error) {
 			setError((error as ApiError).message ?? "something went wrong");
@@ -33,6 +34,7 @@ const LoginForm = () => {
 	};
 	return (
 		<form action={handleSubmit} className={css.form}>
+			<h1 className={css.title}>Вхід</h1>
 			<div className={css.inputGroup}>
 				<label htmlFor="email">Email</label>
 				<input
@@ -67,6 +69,15 @@ const LoginForm = () => {
 				<span className={css.googleIcon}>G</span>
 				Увійти через Google
 			</button>
+
+			<div className={css.registerPrompt}>
+				<span>Немає аккаунту? </span>
+				<Link href="/sign-up" className={css.registerLink}>
+					{" "}
+					Зареєструватися
+				</Link>
+				{/* <button className={css.registerLink}>Зареєструватися</button> */}
+			</div>
 		</form>
 	);
 };
